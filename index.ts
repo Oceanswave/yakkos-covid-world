@@ -100,8 +100,9 @@ const run = async () => {
                 resolve();
             })
             .videoFilters(filters)
-            .size('640x480')
-            .videoBitrate('256k')
+            // Uncomment when testing to reduce processing time
+            // .size('640x480')
+            // .videoBitrate('256k')
             .output('outputfile.mp4')
             .run();
     });

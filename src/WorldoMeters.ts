@@ -16,8 +16,8 @@ export class WorldoMeters {
         countryTableRows.each((_ix, el) => {
             const countryName = $(el).children('td:nth-child(1)').text().trim();
             const data = {
-                totalCases: $(el).children('td:nth-child(2)').text(),
-                newCases: $(el).children('td:nth-child(3)').text(),
+                totalCases: $(el).children('td:nth-child(2)').text().trim(),
+                newCases: $(el).children('td:nth-child(3)').text().trim(),
                 totalDeaths: $(el).children('td:nth-child(4)').text(),
                 newDeaths: $(el).children('td:nth-child(5)').text(),
                 totalRecovered: $(el).children('td:nth-child(6)').text(),
@@ -35,8 +35,8 @@ export class WorldoMeters {
         stateTableRows.each((_ix, el) => {
             const stateName = $(el).children('td:nth-child(1)').text().trim();
             const data = {
-                totalCases: $(el).children('td:nth-child(2)').text(),
-                newCases: $(el).children('td:nth-child(3)').text(),
+                totalCases: $(el).children('td:nth-child(2)').text().trim(),
+                newCases: $(el).children('td:nth-child(3)').text().trim(),
                 totalDeaths: $(el).children('td:nth-child(4)').text(),
                 newDeaths: $(el).children('td:nth-child(5)').text(),
                 activeCases: $(el).children('td:nth-child(6)').text(),
