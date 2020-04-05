@@ -11,7 +11,6 @@ const textFilterPrototype: AudioVideoFilter = {
     filter: 'drawtext',
     options: {
         enable: 'between(t, 12, 24)',
-        //fontfile: path.resolve('./media/LucidaGrande.ttc'),
         text: 'THIS IS TEXT',
         fontsize: 224,
         fontcolor: 'white',

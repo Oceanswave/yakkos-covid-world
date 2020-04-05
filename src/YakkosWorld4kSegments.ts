@@ -100,7 +100,7 @@ export const segments: Segment[] = [
         frame: 664
     },
     {
-        name: "Equador",
+        name: "Ecuador",
         frame: 690
     },
     {
@@ -140,6 +140,7 @@ export const segments: Segment[] = [
     },
     {
         name: "San Juan",
+        alt: "Puerto Rico",
         frame: 829,
         endFrame: 840
     },
@@ -231,6 +232,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Scotland",
+        alt: "UK",
         frame: 1286
     },
     {
@@ -264,7 +266,7 @@ export const segments: Segment[] = [
         frame: 1406
     },
     {
-        name: "Cypress",
+        name: "Cyprus",
         frame: 1420
     },
     {
@@ -295,6 +297,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Yemen",
+        alt: "Myanmar",
         frame: 1526
     },
     {
@@ -354,6 +357,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Burma",
+        alt: "Myanmar",
         frame: 1793
     },
     {
@@ -443,6 +447,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Sumatra",
+        alt: "Indonesia",
         frame: 2113
     },
     {
@@ -451,6 +456,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Borneo",
+        alt: "Brunei",
         frame: 2138
     },
     {
@@ -499,6 +505,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Swaziland",
+        alt: "Eswatini",
         frame: 2324
     },
     {
@@ -525,6 +532,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Lesotho",
+        alt: "South Africa",
         frame: 2487
     },
     {
@@ -537,6 +545,7 @@ export const segments: Segment[] = [
     },
     {
         name: "The Spanish Sahara is gone",
+        alt: "Morocco",
         frame: 2521,
         endFrame: 2550
     },
@@ -592,11 +601,13 @@ export const segments: Segment[] = [
     },
     {
         name: "Algiers",
+        alt: "Algeria",
         frame: 2740
     },
     // Break
     {
         name: "Dahomey",
+        alt: "Benin",
         frame: 2762
     },
     {
@@ -621,6 +632,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Zaire",
+        alt: "Congo",
         frame: 2835,
         endFrame: 2845
     },
@@ -643,6 +655,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Maore",
+        alt: "New Caledonia",
         frame: 2917
     },
     {
@@ -658,6 +671,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Abu Dhabi",
+        alt: "UAE",
         frame: 2967
     },
     {
@@ -666,12 +680,14 @@ export const segments: Segment[] = [
     },
     {
         name: "Yugoslavia",
+        alt: "Croatia",
         frame: 2990,
         endFrame: 3004
     },
     // Break
     {
         name: "Crete",
+        alt: "Greece",
         frame: 3015
     },
     {
@@ -681,6 +697,7 @@ export const segments: Segment[] = [
     },
     {
         name: "Transylvania",
+        alt: "Romania",
         frame: 3050
     },
     // Break

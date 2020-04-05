@@ -3,17 +3,18 @@ import cheerio from 'cheerio';
 import { CountryCovidData } from './CountryCovidData';
 
 const worldoMetersUrl = "https://www.worldometers.info/coronavirus/#countries";
+const worldoMetersUSUrl = "https://www.worldometers.info/coronavirus/country/us/";
 
 export class WorldoMeters {
     static async getLatestCountryData(): Promise<{ [countryName: string]: CountryCovidData }> {
-
-        const result = await axios.get(worldoMetersUrl);
-        const $ = cheerio.load(result.data);
-        const tableRows = $('#main_table_countries_today tr');
         const countryData: { [countryName: string]: CountryCovidData } = {};
 
-        tableRows.each((_ix, el) => {
-            const countryName = $(el).children('td:nth-child(1)').text();
+        const countryResult = await axios.get(worldoMetersUrl);
+        let $ = cheerio.load(countryResult.data);
+        const countryTableRows = $('#main_table_countries_today tr');
+        
+        countryTableRows.each((_ix, el) => {
+            const countryName = $(el).children('td:nth-child(1)').text().trim();
             const data = {
                 totalCases: $(el).children('td:nth-child(2)').text(),
                 newCases: $(el).children('td:nth-child(3)').text(),
@@ -27,6 +28,23 @@ export class WorldoMeters {
             countryData[countryName] = data;
         });
 
+        // Now for US State data.
+        const stateResult = await axios.get(worldoMetersUSUrl);
+        $ = cheerio.load(stateResult.data);
+        const stateTableRows = $(`#usa_table_countries_today tr`);
+        stateTableRows.each((_ix, el) => {
+            const stateName = $(el).children('td:nth-child(1)').text().trim();
+            const data = {
+                totalCases: $(el).children('td:nth-child(2)').text(),
+                newCases: $(el).children('td:nth-child(3)').text(),
+                totalDeaths: $(el).children('td:nth-child(4)').text(),
+                newDeaths: $(el).children('td:nth-child(5)').text(),
+                activeCases: $(el).children('td:nth-child(6)').text(),
+            }
+            countryData[stateName] = data;
+        });
+
+        console.dir(countryData);
         return countryData;
     }
 }

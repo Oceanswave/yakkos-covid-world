@@ -3,8 +3,8 @@ export interface CountryCovidData {
     newCases: string;
     totalDeaths: string;
     newDeaths: string;
-    totalRecovered: string;
+    totalRecovered?: string;
     activeCases: string;
-    seriousCritical: string;
-    totalTests: string;
+    seriousCritical?: string;
+    totalTests?: string;
 }
