@@ -39,3 +39,12 @@ The original Yakko's World 4k video included in the /media folder was obtained v
 ```
 youtube-dl "https://www.youtube.com/watch?v=RCXYQQplS-A" --prefer-ffmpeg --recode-video mp4
 ```
+
+## Offline validation
+
+Use Node.js 24 and Yarn 1.22.22. Run `yarn install --frozen-lockfile`,
+`yarn typecheck`, and `yarn test`. CI runs these checks on pull requests and
+pushes to master. The tests replace HTTP responses with country/state HTML
+fixtures; they do not fetch current statistics, invoke ffmpeg, or render media.
+This verifies parsing and compilation, not the availability or current layout
+of the upstream site or a complete media render.
