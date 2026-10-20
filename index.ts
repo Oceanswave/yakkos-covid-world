@@ -86,7 +86,7 @@ const run = async () => {
     const countryData = await WorldoMeters.getLatestCountryData();
     const filters = getFiltersForSegments(countryData);
 
-    const process = new Promise((resolve, reject) => {
+    const process = new Promise<void>((resolve, reject) => {
         ffmpeg('./media/YakkosWorld_4k.mp4')
             .on('progress', (progress) => {
                 console.log(`[ffmpeg] ${JSON.stringify(progress)}`);
